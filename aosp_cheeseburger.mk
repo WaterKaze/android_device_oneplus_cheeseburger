@@ -21,10 +21,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from cheeseburger device
 $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# PixelExperience stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
 
-PRODUCT_NAME := lineage_cheeseburger
+# Inherit some common Aosp stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+PRODUCT_NAME := aosp_cheeseburger
 PRODUCT_DEVICE := cheeseburger
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
